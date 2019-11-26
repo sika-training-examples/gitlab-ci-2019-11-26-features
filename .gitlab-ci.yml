@@ -1,11 +1,2 @@
-Build A:
-  script: echo Build A ...
-  only:
-    changes:
-      - a
-
-Build B:
-  script: echo Build B xxx ...
-  only:
-    changes:
-      - b
+env:
+  script: env
