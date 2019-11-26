@@ -5,7 +5,7 @@ Build A:
       - a
 
 Build B:
-  script: echo Build B ...
+  script: echo Build B xxx ...
   only:
     changes:
       - b
