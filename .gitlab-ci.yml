@@ -1,2 +1,2 @@
 Hello World:
-  script: echo Hello World! && false
+  script: sh ci/hello.sh
