@@ -1,8 +1,13 @@
-test:
-  when: manual
-  script: echo test ... && false
+stages:
+  - build
+  - deploy
 
-test2:
-  when: manual
-  script: echo test ... && false
-  allow_failure: false
+build:
+  stage: build
+  script: echo build
+
+deploy:
+  stage: deploy
+  script: echo deploy
+  only:
+    - master
