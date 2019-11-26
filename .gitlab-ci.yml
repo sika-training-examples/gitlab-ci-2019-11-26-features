@@ -1,17 +1,14 @@
-before_script:
-  - echo Global before
+test:
+  script: echo Run test ...
 
-after_script:
-  - echo Global after
+deploy:
+  script: echo Run deploy ...
+  when: manual
 
-job1:
-  script: echo Job1!
+diagnostics:
+  script: echo Run diagnostics ...
+  when: on_failure
 
-job2:
-  script: echo Job2! && false
-
-job3:
-  before_script:
-    - echo Local before
-  after_script: []
-  script: echo Job3!
+reporting:
+  script: echo Run CI reporting ...
+  when: always
