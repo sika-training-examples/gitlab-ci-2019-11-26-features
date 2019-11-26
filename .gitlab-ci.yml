@@ -1,14 +1,3 @@
 test:
-  script: echo Run test ...
-
-deploy:
-  script: echo Run deploy ...
-  when: manual
-
-diagnostics:
-  script: echo Run diagnostics ...
-  when: on_failure
-
-reporting:
-  script: echo Run CI reporting ...
-  when: always
+  script: echo test ... && false
+  allow_failure: true
