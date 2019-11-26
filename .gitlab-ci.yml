@@ -1,12 +1,8 @@
-variables:
-  XXX_GLOBAL: global
-  XXX_IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
-
-
-job1:
-  script: env | grep XXX
-
-job2:
-  variables:
-    XXX_LOCAL: local
-  script: env | grep XXX
+job:
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - now
+  script:
+    - date >> now
+    - cat now
