@@ -1,8 +1,7 @@
 job:
-  cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-      - now
+  image: node
+  variables:
+    GIT_CLEAN_FLAGS: -ffdx -e node_modules
   script:
-    - date >> now
-    - cat now
+    - yarn
+    - yarn build
