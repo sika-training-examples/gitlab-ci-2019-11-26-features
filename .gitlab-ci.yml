@@ -1,2 +1,2 @@
-job:
+Hello World:
   script: echo Hello World! && false
