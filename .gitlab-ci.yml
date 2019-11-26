@@ -1,13 +1,11 @@
-stages:
-  - build
-  - deploy
-
-build:
-  stage: build
-  script: echo build
-
-deploy:
-  stage: deploy
-  script: echo deploy
+Build A:
+  script: echo Build A ...
   only:
-    - master
+    changes:
+      - a
+
+Build B:
+  script: echo Build B ...
+  only:
+    changes:
+      - b
